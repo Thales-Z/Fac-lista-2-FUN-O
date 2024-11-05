@@ -1,0 +1,36 @@
+/*QUESTÃO 03:
+Fazer uma função leituraDados que permaneça
+lendo valores reais até que o número 0 seja
+digitado. Ao final, a função deve determinar a
+quantidade de elementos fornecidos (excluindo
+o 0) e o maior dentre eles.*/
+
+#include<stdio.h>
+
+void leituraDados ()
+{
+	int a, cont=0, maior=0;
+	
+	do {
+		printf("digite um numero ");
+		scanf("%d", &a);
+	
+		if (a > maior) {
+	
+		maior= a;
+	}
+			cont++;
+	
+	} while (a>0);
+	printf("%d", cont-1);
+	
+	printf("\n%d", maior);
+}
+
+void main ()
+{
+
+	leituraDados ();
+	
+	
+}
