@@ -1,0 +1,35 @@
+/*QUESTÃO 02:
+Dados dois números inteiros A e B, fazer uma
+função que determine o número de potências
+de 2 existentes no intervalo definido pelos dois
+valores, assim como a maior delas.*/
+
+#include<stdio.h>
+
+int potencias (int a, int b) {
+	
+	int i, maior;
+	int cont=0;
+	
+	for (i=2;i<=b;i*=2){
+		
+		//printf("\n %d ", i);
+		maior = i;
+		if (i>=a){
+			cont++;
+	} 
+	} 
+	printf("o numero de potencias sao: %d ", cont);
+	printf("\nA maior potencia e: %d ", maior);
+}
+
+void main ()
+{
+	int a, b;
+	
+	printf("Digite 2 numeros  ");
+	scanf("%d %d", &a, &b);
+	
+	potencias (a,b);
+	
+}
