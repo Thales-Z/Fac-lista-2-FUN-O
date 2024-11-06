@@ -6,30 +6,33 @@ valores, assim como a maior delas.*/
 
 #include<stdio.h>
 
-int potencias (int a, int b) {
+int potencias (int a, int b, int *quantidade, int *maior) {
 	
-	int i, maior;
+	int i, ma;
 	int cont=0;
 	
-	for (i=2;i<=b;i*=2){
+	for (i=1;i<=b;i*=2){
 		
 		//printf("\n %d ", i);
-		maior = i;
+		ma = i;
 		if (i>=a){
 			cont++;
 	} 
 	} 
-	printf("o numero de potencias sao: %d ", cont);
-	printf("\nA maior potencia e: %d ", maior);
+	*maior = ma;
+	*quantidade = cont;
+	
 }
 
 void main ()
 {
-	int a, b;
+	int inferior, superior, quantidade, maior;
 	
 	printf("Digite 2 numeros  ");
-	scanf("%d %d", &a, &b);
+	scanf("%d %d", &inferior, &superior);
 	
-	potencias (a,b);
+	potencias (inferior, superior, &quantidade,&maior);
 	
+	printf("o numero de potencias sao: %d ", quantidade);
+	printf("\nA maior potencia e: %d ", maior);
 }
