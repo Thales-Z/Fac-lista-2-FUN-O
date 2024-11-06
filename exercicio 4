@@ -22,9 +22,9 @@ void main (){
 	scanf("%d %d", &a, &b);
 	
 	for (i=a;i<=b;i*=a){
-		//printf("\n %d ", i);
+		printf("\n %d ", i);
 		
-			cont++;
+			(cont++);
 	
-}printf("\A solucao e: ", cont);
+}printf("\nA solucao e: %d", cont);
 }
